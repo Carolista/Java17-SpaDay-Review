@@ -20,8 +20,6 @@ public class UserController {
 
     @PostMapping("")
     public String processAddUserForm(@ModelAttribute @Valid User user, Errors errors) {
-        System.out.println(user.getPassword());
-        System.out.println(user.getVerifyPassword());
         if (!errors.hasErrors()) {
             return "user/index";
         } else {
